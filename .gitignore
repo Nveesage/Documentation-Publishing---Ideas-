@@ -1,0 +1,12 @@
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# MkDocs generated site
+/site/
+
+# Cache files
+.cache/
+
+# Environment variables and secrets
+.env

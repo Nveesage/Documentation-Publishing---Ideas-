@@ -1,0 +1,795 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../idea%20docs/mirror_mirror_core_architecture_product_blueprint/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>code deck.md - Ideas</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Ideas" class="md-header__button md-logo" aria-label="Ideas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Ideas
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              code deck.md
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Ideas" class="md-nav__button md-logo" aria-label="Ideas" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Ideas
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mirror Mirror
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mirror Mirror
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idea%20docs/Mirror%20Mirror%20synthesized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mirror Mirror synthesized
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idea%20docs/Mirror%20Mirror/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mirror Mirror
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idea%20docs/mirror_mirror_complete_conversation_archive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mirror Mirror conversation archive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../idea%20docs/mirror_mirror_core_architecture_product_blueprint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mirror Mirror product blueprint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    code deck.md
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>code deck.md</h1>
+
+<pre><code class="language-json">{
+  &quot;slides&quot;: [
+    {
+      &quot;slide_number&quot;: 1,
+      &quot;title&quot;: &quot;MIRROR MIRROR&quot;,
+      &quot;subtitle&quot;: &quot;The High-Fidelity Diagnostic Mirror for Human Performance&quot;,
+      &quot;layout&quot;: &quot;title_hero&quot;,
+      &quot;content&quot;: {
+        &quot;tagline&quot;: &quot;Transforming solo practice from cognitive overload into an addictive, objective diagnostic feedback loop.&quot;,
+        &quot;presenter_info&quot;: &quot;Product Design &amp; Architectural Vision Deck&quot;
+      }
+    },
+    {
+      &quot;slide_number&quot;: 2,
+      &quot;title&quot;: &quot;The Problem with Solo Practice&quot;,
+      &quot;subtitle&quot;: &quot;High-friction environments and cognitive overload kill performance growth&quot;,
+      &quot;layout&quot;: &quot;split_comparison&quot;,
+      &quot;content&quot;: {
+        &quot;left_column&quot;: {
+          &quot;heading&quot;: &quot;The 'Dumb Mirror' Trap&quot;,
+          &quot;points&quot;: [
+            &quot;Cognitive Overload: Your brain cannot perform and evaluate itself simultaneously.&quot;,
+            &quot;Complete Blindness: People are fundamentally blind to their own behavioral blind spots.&quot;,
+            &quot;Zero Objective Data: No feedback on pacing, micro-expressions, or eye contact drift.&quot;
+          ]
+        },
+        &quot;right_column&quot;: {
+          &quot;heading&quot;: &quot;The Human Panel Friction&quot;,
+          &quot;points&quot;: [
+            &quot;Hard to Schedule: Assembling friends or mentors takes immense effort and coordination.&quot;,
+            &quot;Subjective Bias: Human panels provide polite encouragement rather than precise data.&quot;,
+            &quot;High Pressure: Practicing raw material in front of real people induces unnecessary anxiety.&quot;
+          ]
+        }
+      }
+    },
+    {
+      &quot;slide_number&quot;: 3,
+      &quot;title&quot;: &quot;The Solution: An AI MRI, Not a Coach&quot;,
+      &quot;subtitle&quot;: &quot;Mirror Mirror exposes reality instead of lecturing or teaching generic lessons&quot;,
+      &quot;layout&quot;: &quot;three_column_cards&quot;,
+      &quot;content&quot;: {
+        &quot;card_1&quot;: {
+          &quot;title&quot;: &quot;The High-Fidelity Mirror&quot;,
+          &quot;description&quot;: &quot;An active, intelligent observer that listens to speech, analyzes body language, and evaluates performance in silence.&quot;
+        },
+        &quot;card_2&quot;: {
+          &quot;title&quot;: &quot;Diagnostic Reality&quot;,
+          &quot;description&quot;: &quot;Like a medical MRI, it doesn't teach you how to live—it pinpoints the exact physical location of the problem with total clarity.&quot;
+        },
+        &quot;card_3&quot;: {
+          &quot;title&quot;: &quot;Self-Awareness Loop&quot;,
+          &quot;description&quot;: &quot;Eliminates cognitive friction by revealing exact behavioral symptoms so users can intuitively self-correct.&quot;
+        }
+      }
+    },
+    {
+      &quot;slide_number&quot;: 4,
+      &quot;title&quot;: &quot;The Multi-Modal Diagnostic Architecture&quot;,
+      &quot;subtitle&quot;: &quot;Parsing unscripted human behavior across three observable layers&quot;,
+      &quot;layout&quot;: &quot;feature_grid&quot;,
+      &quot;content&quot;: {
+        &quot;grid_items&quot;: [
+          {
+            &quot;icon&quot;: &quot;chat_bubble&quot;,
+            &quot;title&quot;: &quot;The Verbal Layer (What You Say)&quot;,
+            &quot;description&quot;: &quot;Speech-to-Text parsing evaluating narrative structure (e.g., STAR framework), answer relevance, and content integrity.&quot;
+          },
+          {
+            &quot;icon&quot;: &quot;graphic_eq&quot;,
+            &quot;title&quot;: &quot;The Vocal Layer (How You Say It)&quot;,
+            &quot;description&quot;: &quot;Audio waveform telemetry tracking words per minute (pacing), pitch spikes under stress, and filler word loops.&quot;
+          },
+          {
+            &quot;icon&quot;: &quot;visibility&quot;,
+            &quot;title&quot;: &quot;The Visual Layer (How You Look)&quot;,
+            &quot;description&quot;: &quot;Computer vision landmark tracking monitoring camera eye contact, posture shifts, fidgeting, and emotional variance.&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;slide_number&quot;: 5,
+      &quot;title&quot;: &quot;The Product Loop: From Scan to Prescription&quot;,
+      &quot;subtitle&quot;: &quot;Replacing metric noise with rapid, addictive behavioral retakes&quot;,
+      &quot;layout&quot;: &quot;horizontal_process&quot;,
+      &quot;content&quot;: {
+        &quot;steps&quot;: [
+          {
+            &quot;step_number&quot;: &quot;01&quot;,
+            &quot;title&quot;: &quot;SCAN&quot;,
+            &quot;description&quot;: &quot;User performs a short, unscripted scenario in front of the camera.&quot;
+          },
+          {
+            &quot;step_number&quot;: &quot;02&quot;,
+            &quot;title&quot;: &quot;REVEAL&quot;,
+            &quot;description&quot;: &quot;An interactive video timeline flags exact behavioral symptoms.&quot;
+          },
+          {
+            &quot;step_number&quot;: &quot;03&quot;,
+            &quot;title&quot;: &quot;PRESCRIBE&quot;,
+            &quot;description&quot;: &quot;AI issues a micro-targeted parameter or constraint for the next attempt.&quot;
+          },
+          {
+            &quot;step_number&quot;: &quot;04&quot;,
+            &quot;title&quot;: &quot;RE-SCAN&quot;,
+            &quot;description&quot;: &quot;User immediately retries to eliminate the red flags and get a clean scan.&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;slide_number&quot;: 6,
+      &quot;title&quot;: &quot;Transforming Noisy Data into Pure Clarity&quot;,
+      &quot;subtitle&quot;: &quot;Why qualitative observations outperform cold statistics&quot;,
+      &quot;layout&quot;: &quot;table_view&quot;,
+      &quot;content&quot;: {
+        &quot;headers&quot;: [&quot;Raw Telemetry (The Noise)&quot;, &quot;Diagnostic Observation (The Clarity)&quot;],
+        &quot;rows&quot;: [
+          [&quot;'Pacing spiked by 20% at timestamp 02:14.'&quot;, &quot;'You began to rush your words right when you started explaining why you left your last job.'&quot;],
+          [&quot;'Eye contact dropped to 45% during technical answer.'&quot;, &quot;'Your eyes drifted to the top-left corner whenever you searched for a complex technical term.'&quot;],
+          [&quot;'Filler word count: 12 'like' loops.'&quot;, &quot;'You looped 'like' 5 times in 15 seconds while defining your team's operational framework.'&quot;]
+        ]
+      }
+    },
+    {
+      &quot;slide_number&quot;: 7,
+      &quot;title&quot;: &quot;Target Audience: High-Stakes Independent Performers&quot;,
+      &quot;subtitle&quot;: &quot;Empowering individuals who operate outside institutional gatekeepers&quot;,
+      &quot;layout&quot;: &quot;four_quadrant_grid&quot;,
+      &quot;content&quot;: {
+        &quot;quadrant_1&quot;: {
+          &quot;title&quot;: &quot;Remote Tech &amp; Freelance Hustlers&quot;,
+          &quot;description&quot;: &quot;Developers, designers, and writers pitching international clients on Zoom who need to project authority and confidence.&quot;
+        },
+        &quot;quadrant_2&quot;: {
+          &quot;title&quot;: &quot;High-Ticket Sales Closers&quot;,
+          &quot;description&quot;: &quot;Sales reps needing to eliminate vocal urgency, pitch spikes, and rushing when discussing pricing and contracts.&quot;
+        },
+        &quot;quadrant_3&quot;: {
+          &quot;title&quot;: &quot;Content Creators &amp; Streamers&quot;,
+          &quot;description&quot;: &quot;YouTubers and podcasters training eye contact with the camera lens and refining vocal dynamics for talking-head videos.&quot;
+        },
+        &quot;quadrant_4&quot;: {
+          &quot;title&quot;: &quot;International Professionals&quot;,
+          &quot;description&quot;: &quot;Global workers calibrating their tone, body language, and pacing against regional corporate standards.&quot;
+        }
+      }
+    },
+    {
+      &quot;slide_number&quot;: 8,
+      &quot;title&quot;: &quot;The Premium Crown Jewel: Vision Projection&quot;,
+      &quot;subtitle&quot;: &quot;Unlocking human potential through AI-driven self-modeling&quot;,
+      &quot;layout&quot;: &quot;hero_highlight&quot;,
+      &quot;content&quot;: {
+        &quot;headline&quot;: &quot;Showing the user a vision of their true potential&quot;,
+        &quot;description&quot;: &quot;Generative AI takes the user's face and voice, removes behavioral bugs, and hands them a video of themselves executing their goal flawlessly. Psychological self-modeling allows users to lock onto this target image and systematically close the gap through diagnostic scans.&quot;
+      }
+    },
+    {
+      &quot;slide_number&quot;: 9,
+      &quot;title&quot;: &quot;Monetization &amp; Data Engine Strategy&quot;,
+      &quot;subtitle&quot;: &quot;Free baseline utility with massive upstream enterprise value&quot;,
+      &quot;layout&quot;: &quot;split_content&quot;,
+      &quot;content&quot;: {
+        &quot;left_side&quot;: {
+          &quot;title&quot;: &quot;Consumer Freemium Model&quot;,
+          &quot;points&quot;: [
+            &quot;Free Core Diagnostic: Baseline scans and standard scenarios are free for all seekers.&quot;,
+            &quot;Premium Tiers: Unlocks hyper-specific job simulations, custom company guides, and Vision Projection.&quot;,
+            &quot;Peer Review Marketplace: Optional cut from paid human expert evaluations.&quot;
+          ]
+        },
+        &quot;right_side&quot;: {
+          &quot;title&quot;: &quot;Synthetic Data Factory (B2B)&quot;,
+          &quot;points&quot;: [
+            &quot;Anonymized Telemetry: Converting user behavioral vectors into privacy-safe metadata.&quot;,
+            &quot;Synthetic Dataset Manufacturing: Generating 100% synthetic audio/video datasets for AI labs.&quot;,
+            &quot;Zero Biometric Risk: Monetizing aggregate human behavioral intelligence without selling user identities.&quot;
+          ]
+        }
+      }
+    },
+    {
+      &quot;slide_number&quot;: 10,
+      &quot;title&quot;: &quot;Physical Experiential Strategy: Smart Mirror Kiosks&quot;,
+      &quot;subtitle&quot;: &quot;Bridging the software platform into a high-impact physical presence&quot;,
+      &quot;layout&quot;: &quot;two_column_cards&quot;,
+      &quot;content&quot;: {
+        &quot;card_1&quot;: {
+          &quot;title&quot;: &quot;Strategic Pop-Up Placement&quot;,
+          &quot;description&quot;: &quot;Installing sleek, physical two-way smart mirrors in co-working hubs, tech hubs, and private practice spaces.&quot;
+        },
+        &quot;card_2&quot;: {
+          &quot;title&quot;: &quot;The Acquisition Engine&quot;,
+          &quot;description&quot;: &quot;Users step up for a free 60-second 'Presence Scan' on the glass, then scan a QR code to unlock their full diagnostic report and prescription on the mobile app.&quot;
+        }
+      }
+    },
+    {
+      &quot;slide_number&quot;: 11,
+      &quot;title&quot;: &quot;Product Roadmap &amp; Execution&quot;,
+      &quot;subtitle&quot;: &quot;Phase-by-phase rollout from MVP to global ecosystem&quot;,
+      &quot;layout&quot;: &quot;timeline_milestones&quot;,
+      &quot;content&quot;: {
+        &quot;milestones&quot;: [
+          {
+            &quot;phase&quot;: &quot;Phase 1: MVP Launch&quot;,
+            &quot;details&quot;: &quot;Launch lightweight web app focusing on Job Seeker mock interview diagnostic scans (Vocal + Verbal).&quot;
+          },
+          {
+            &quot;phase&quot;: &quot;Phase 2: Full Multi-Modal &amp; Prescriptions&quot;,
+            &quot;details&quot;: &quot;Integrate visual vision landmark tracking, timeline X-Ray flagging, and micro-constraint prescriptions.&quot;
+          },
+          {
+            &quot;phase&quot;: &quot;Phase 3: Vision Projection &amp; B2B Data&quot;,
+            &quot;details&quot;: &quot;Roll out generative self-modeling for premium users and initialize the B2B synthetic data factory.&quot;
+          }
+        ]
+      }
+    },
+    {
+      &quot;slide_number&quot;: 12,
+      &quot;title&quot;: &quot;MIRROR MIRROR&quot;,
+      &quot;subtitle&quot;: &quot;The High-Tech Training Ground for Human Performance&quot;,
+      &quot;layout&quot;: &quot;closing_hero&quot;,
+      &quot;content&quot;: {
+        &quot;final_quote&quot;: &quot;\&quot;You aren't the coach. You are the high-tech training ground.\&quot;&quot;,
+        &quot;call_to_action&quot;: &quot;Gamifying self-awareness, one clean scan at a time.&quot;
+      }
+    }
+  ]
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

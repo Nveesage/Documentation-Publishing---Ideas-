@@ -1,0 +1,17 @@
+site_name: Ideas
+
+nav: 
+  - home: index.md
+  - Mirror Mirror:
+      - Mirror Mirror synthesized: idea docs/Mirror Mirror synthesized.md
+      - Mirror Mirror: idea docs/Mirror Mirror.md
+      - Mirror Mirror conversation archive: idea docs/mirror_mirror_complete_conversation_archive.md
+      - Mirror Mirror product blueprint: idea docs/mirror_mirror_core_architecture_product_blueprint.md
+  - code: 
+      - code deck.md: codes/building idea deck.md
+
+theme: material
+
+features:
+  - navigation.tab
+  - navigation.tab.sticky
